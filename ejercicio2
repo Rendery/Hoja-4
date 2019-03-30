@@ -1,0 +1,38 @@
+
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+void main()
+{
+	int mujeres, hombres, edad,sexo,dinero;
+	char hola[20], sexo;
+	cout << "Hombre o Mujer [H] o [M]" << endl;
+	cin >> sexo;
+	cout << "Minutos: " << endl;
+	cin >> edad;
+	
+	switch (sexo)
+	{
+	case 'H':
+	{
+		if (edad < 25)
+		{
+
+		}
+	}
+	break;
+	case 'M':
+	{
+
+	}
+	break;
+	}
+
+	
+
+	cout << "pagas" << dinero << " soles en total";
+
+		_getch();
+}
