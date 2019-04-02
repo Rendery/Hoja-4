@@ -1,0 +1,20 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int horas;
+	cout << "Horas trabajadas:" << endl;
+	cin >> horas;
+	cout << "a usted se le pagará: ";
+	if (40 >= horas)
+	{
+		cout << horas * 16;
+	}
+	else
+	{
+		cout << (16 * 40) + (20 * (horas - 40));
+	}
+	_getch();
+}
+
