@@ -1,0 +1,14 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int diametro, extra;
+	cout << "      Pizzas Don Raul" << endl;
+	cout << "         - Diametro de la pizza: "<< endl;
+	cout << "              "; cin >> diametro;
+	cout << "         - Ingredientes extra: " << endl;
+	cout << "              "; cin >> extra;
+	cout << "El precio total a pagar es: " << (diametro*1.5) + (extra*2.5);
+	_getch();
+}
