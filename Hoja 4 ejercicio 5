@@ -1,0 +1,23 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int numero, precio;
+	double igv;
+	cout << "numero de aticulos: " << endl;
+	cin >> numero;
+	cout << "Precio del articulo: " << endl;
+	cin >> precio;
+
+	igv = (numero*precio * 18) / 100.00;
+
+	cout << "Por la compra de " << numero << " articulos de " << precio << endl;
+	cout << "total de: " << numero*precio << endl;
+	cout << "-------------------------------------------" << endl;
+	cout << "+18% de IGV es: " << igv << endl;
+	cout << "-------------------------------------------" << endl;
+	cout << "Pagó total a cancelar: " << igv + (numero*precio) << endl;
+	_getch();
+}
+
