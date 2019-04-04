@@ -1,0 +1,33 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int litros;
+
+	cout << "ingrese numero de litros: "<< endl;
+	cin >> litros;
+
+	if ((0 <= litros)&&(litros <= 50))
+	{
+		cout << "Usted debe pagar: " << 20 << endl;
+	}else
+	if ((51 <= litros) && (litros <= 200))
+	{
+		cout << "Usted debe pagar: " << 20+(litros - 50)*2 << endl;
+	}
+	else
+	if (201 <= litros)
+	{
+		cout << "Usted debe pagar: " << 320 + (litros - 200)*3.5 << endl;
+	}
+	else
+	{
+		system("color c");
+		cout << "        ERROR PRRO !!!! " << endl;
+	}
+
+	_getch();
+}
