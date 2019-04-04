@@ -1,0 +1,102 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int años,puntos=1;
+	char estudios;
+	cout << "Ingrese la cantidad de años que labora: " << endl;
+	cin >> años;
+	cout << "Estudios (P: primaria; S: secundaria; U: universitario; G: posgrado): " << endl; //5 10 20 30
+	cin >> estudios;
+	cout << endl;
+	if ((0<=años)&&(años <= 5))
+	{
+		puntos = 5;
+		switch (estudios)
+		{
+			case 'P':
+			{
+				puntos = puntos + 5;
+			}break;
+			case 'p':
+			{
+				puntos = puntos + 5;
+			}break;
+			case 'S':
+			{
+				puntos = puntos + 10;
+			}break;
+			case 's':
+			{
+				puntos = puntos + 10;
+			}break;
+			case 'U':
+			{
+				puntos = puntos + 20;
+			}break;
+			case 'u':
+			{
+				puntos = puntos + 20;
+			}break;
+			case 'G':
+			{
+				puntos = puntos + 30;
+			}break;
+			case 'g':
+			{
+				puntos = puntos + 30;
+			}break;
+		}
+		cout << "Tienes " << puntos << " puntos";
+	}
+	else if (6 <= años)
+	{
+		puntos = 10;
+		switch (estudios)
+		{
+		case 'P':
+		{
+			puntos = puntos + 5;
+		}break;
+		case 'p':
+		{
+			puntos = puntos + 5;
+		}break;
+		case 'S':
+		{
+			puntos = puntos + 10;
+		}break;
+		case 's':
+		{
+			puntos = puntos + 10;
+		}break;
+		case 'U':
+		{
+			puntos = puntos + 20;
+		}break;
+		case 'u':
+		{
+			puntos = puntos + 20;
+		}break;
+		case 'G':
+		{
+			puntos = puntos + 30;
+		}break;
+		case 'g':
+		{
+			puntos = puntos + 30;
+		}break;
+		}
+
+		cout << "Tienes " << puntos << " puntos";
+	}
+	else 
+	{
+		cout << "ERROR";
+	}
+
+	_getch();
+}
