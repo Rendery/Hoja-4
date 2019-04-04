@@ -1,0 +1,64 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	char		kimberly, valeria;
+	double			fede, maricielo;
+	
+	cout << "Ingrese el modelo : " << endl;
+	cin >> kimberly;
+	cout << "Color(B : blanco; M: metalizado; O: otros) : " << endl;
+	cin >> valeria;
+	cout << "Edad : " << endl;
+	cin >> maricielo;
+
+	if ((kimberly == 'A')||(kimberly == 'a'))
+	{
+		if ((valeria == 'B')||(valeria == 'b'))
+		{
+			fede = 240.50;
+		}
+		if ((valeria == 'M') || (valeria == 'm'))
+		{
+			fede = 330.50;
+		}
+		if ((valeria == 'O') || (valeria == 'o'))
+		{
+			fede = 270.50;
+		}
+	}
+
+	else if ((kimberly == 'B') || (kimberly == 'b'))
+	{
+		if ((valeria == 'B') || (valeria == 'b'))
+		{
+			fede = 300.00;
+		}
+		if ((valeria == 'M') || (valeria == 'm'))
+		{
+			fede = 360.50;
+		}
+		if ((valeria == 'O') || (valeria == 'o'))
+		{
+			fede = 330.00;
+		}
+	}
+
+	if (maricielo < 31)
+	{
+		fede = fede *(125) / 100.00;
+	}
+	else if ((31 < maricielo) && (maricielo < 65))
+	{
+		fede = fede + 0;
+	}
+	else if (65 < maricielo)
+	{
+		fede = fede *(110) / 100.00;
+	}
+
+	cout << "Precio del seguro : " << fede << endl;
+	_getch();
+}
