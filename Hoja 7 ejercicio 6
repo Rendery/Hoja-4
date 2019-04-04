@@ -1,0 +1,48 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	int				hora, minu, segu ,tarde;
+	char			nombre, pater, mater;
+	long long		num;
+	cout << "Ingrese código del empleado: ";
+	cin >> num;
+
+	//desifra codigo
+
+	segu 	= num % 100;
+	minu 	= num % 10000			/ 100;
+	hora 	= num % 1000000			/ 10000;
+	mater 	= num % 100000000		/ 1000000;
+	pater	= num % 10000000000		/ 100000000;
+	nombre 	= num % 1000000000000	/ 10000000000;
+
+	// tarde??  9:00
+
+	if (hora > 9)
+	{
+		tarde = 1;
+	}
+	else if (hora <= 9)
+	{
+		if ((minu > 0) || (segu > 0))
+		{
+			tarde = 1;
+		}else
+		{ 
+			tarde = 0;
+		}
+	}
+
+	cout << "Hora de entrada : "		<< hora <<				 endl;
+	cout << "Minuto de entrada : "		<< minu <<				 endl;
+	cout << "Segundos de entrada : "	<< segu <<				 endl;
+	cout << "Su nombre empieza con la letra : "			 << char(nombre) << endl;
+	cout << "Su apellido paterno inicia con la letra : " << char(pater)	 << endl;
+	cout << "Su apellido materno inicia con la letra : " << char(minu)	 << endl;
+	cout << "Llegó tarde(1: sí; 0: no) : " << tarde << endl;
+
+	_getch();
+}
