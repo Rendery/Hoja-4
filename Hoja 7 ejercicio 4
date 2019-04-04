@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int suma(int numero)
+{
+	int suma=0,a,b,c,d;
+	d = numero % 10;
+	c = (numero % 100) / 10;
+	b = (numero % 1000) / 100;
+	a = numero  / 1000;
+	// a b c d
+	if (a % 2 == 0){}
+	else
+	{
+		suma = suma + a;
+	}
+	if (b % 2 == 0){}
+	else
+	{
+		suma = suma + b;
+	}
+	if (c % 2 == 0){}
+	else
+	{
+		suma = suma + c;
+	}
+	if (d % 2 == 0){}
+	else
+	{
+		suma = suma + d;
+	}
+
+	return suma;
+}
+int main()
+{
+	int numero;
+	cout << "ingrese un numero de 4 cifras: " << endl;
+	cin >> numero;
+	cout << suma(numero);
+	_getch();
+}
