@@ -1,0 +1,32 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	long long numero;
+	cout << "ingrese codigo de barras: ";
+	cin >> numero;
+
+	cout << "Dia de vencimiento: ";
+	cout << (numero % 1000000000000)/ 10000000000 << endl; // dia
+	cout << "Mes de vencimiento: ";
+	cout << (numero % 10000000000)  / 100000000 << endl; // mes
+	cout << "Año de vencimiento: ";
+	cout << (numero % 100000000)/ 1000000; // año 2
+	cout << (numero % 1000000)	/ 10000 << endl; // año 1
+	cout << "Tipo de producto: ";
+	cout << char ((numero % 10000)	/ 100) << endl;// ascii
+	cout << "Producto perecible: ";
+	int pere = numero % 100;
+	if (pere == 00)
+	{
+		cout << "Perecible ";
+	}
+	else
+	{
+		cout << "No Perecible";
+	}
+	_getch();
+}
