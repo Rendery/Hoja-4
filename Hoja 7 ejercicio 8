@@ -1,0 +1,53 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+{
+	double num, precio=1;
+	char tipo, socio;
+	cout << "Ingrese la zona elegida(Vip, Platea, Popular) : " << endl;
+	cin >> tipo;
+	cout << "Ingrese el número de entradas : " << endl;
+	cin >> num;
+	cout << "Es socio de la U(S : sí; N: no) : " << endl;
+	cin >> socio;
+
+	if ((tipo == 'V') || (tipo == 'v'))
+	{
+		precio = 350.00;
+	}
+	if ((tipo == 'P') || (tipo == 'p'))
+	{
+		precio = 130.00;
+	}
+	if ((tipo == 'E') || (tipo == 'e'))
+	{
+		precio = 50.00;
+	}
+
+	if ((3 <= num) && (num <= 6))
+	{
+		precio = precio*num * 95 / 100.00;
+	}
+	if ((7 <= num) && (num <= 9))
+	{
+		precio = precio*num * 92.5 / 100.00;
+	}
+	if (num > 9)
+	{
+		precio = precio*num * 90 / 100.00;
+	}
+
+	if ((socio == 'S') || (socio == 's'))
+	{
+		precio = precio* 92/100.00;
+	}
+	if ((socio == 'N') || (socio == 'n'))
+	{
+		precio = precio + 0.00;
+	}
+
+	cout << "El monto a pagar es: "<< precio << endl;
+	_getch();
+}
