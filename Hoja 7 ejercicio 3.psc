@@ -5,10 +5,10 @@ Algoritmo ejer3
 	Escribir 'Jugador nacional[N] Jugador Extranjero [E]'
 	leer tipo
 	//
-	si (tipo = N) entonces
+	si (tipo = 'N') entonces
 		sueldo <- sueldo + 0
 	FinSi
-	si (edad = E) entonces
+	si (tipo = 'E') entonces
 		sueldo <- sueldo + 500
 	FinSi
 	//
@@ -30,6 +30,6 @@ Algoritmo ejer3
 		sueldo <- sueldo + 800
 	FinSi
 	
-	Escribir 'El sueldo será de: ' sueldo
+	Escribir 'El sueldo serÃ¡ de: ' sueldo
 	
 FinAlgoritmo
