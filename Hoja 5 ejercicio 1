@@ -1,37 +1,39 @@
 #include <iostream>
 #include <conio.h>
 using namespace std;
+//numerico
+
+//equlitero 3 isosceles2 escaleno 0
 int main()
 {
-	int lado1, lado2, lado3;
+	int lado1, lado2, lado3 ,rodrigo;
 	cout << "lado 1 : " << endl;
 	cin >> lado1;
 	cout << "lado 2 : " << endl;
 	cin >> lado2;
 	cout << "lado 3 : " << endl;
 	cin >> lado3;
-
-	if (((lado1 - lado2) < lado3) && ((lado1 + lado2) > lado3))
+	//logica
+	if (!((lado1 + lado2 > lado3) && (lado1 - lado2 < lado3)))
 	{
-		if (lado1 == lado2 == lado3)
-		{
-			cout << "El triangulo es EQUILATERO" << endl;
-		}
-		else 
-		if ((lado1 == lado2) || (lado2 == lado3))
-		{
-			cout << "El triangulo es ISOSCELES" << endl;
-		}
-		else
-		{
-			cout << "El triangulo es ESCALENO" << endl;
-		}
+		cout << "el triangulo no existe";
 	}
 	else
 	{
-		system("colar c");
-		cout << "Error      --->     el triangulo no existe";
+		rodrigo = ((lado1 == lado2) + (lado2 == lado3) + (lado3 == lado1));
+		//imprimir
+		if (rodrigo == 3)
+		{
+			cout << "el triangulo es Equilatero";
+		}
+		if (rodrigo == 1)
+		{
+			cout << "el triangulo es Isoceles";
+		}
+		if (rodrigo == 0)
+		{
+			cout << "el triangulo es Escaleno";
+		}
 	}
 	_getch();
 }
-
